@@ -1,5 +1,7 @@
 // Setup empty JS object to act as endpoint for all routes
-const projectData = [];
+const projectData = {
+   array: []
+};
 
 // Require Express to run server and routes
 const express = require("express");
@@ -42,19 +44,19 @@ function addUserEntry(req, res) {
     feelings: req.body.feelings,
   };
 
-  projectData.push(newEntry);
-  res.send(projectData);
+  projectData.array.push(newEntry);
+  res.send(projectData.array);
 }
 
 //return projectData
 app.get("/projectData", getProjectData);
 
 function getProjectData(req, res) {
-  res.send(projectData);
+  res.send(projectData.array);
 }
 
 app.get('/all',getAllData)
 function getAllData(req,res){
-    res.send(projectData)
-    console.log(projectData)
+    res.send(projectData.array)
+    console.log(projectData.array)
 }

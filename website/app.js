@@ -1,6 +1,6 @@
 /* Global Variables */
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=";
-const apiKey = "&appid=5d440dcd25ae78fd3e21200458636bba";
+const apiKey = "&appid=5d440dcd25ae78fd3e21200458636bba&units=imperial";
 const countryCode = ",us";
 
 // Create a new date instance dynamically with JS
@@ -27,7 +27,7 @@ const updateUI = async () => {
   try {
     const allData = await request.json();
     document.getElementById("date").innerHTML = allData[allData.length-1].date;
-    document.getElementById("temp").innerHTML = ((allData[allData.length-1].temp -273.15) * (9/5) +32).toFixed(2) + ' Degrees Fahrenheit';
+    document.getElementById("temp").innerHTML = allData[allData.length-1].temp;
     document.getElementById("content").innerHTML = allData[allData.length-1].feelings;
   } catch (error) {
     console.log("error", error);

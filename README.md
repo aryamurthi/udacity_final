@@ -1,1 +1,1 @@
-# udacityWeatherJournalApp
+# udacityFinalTravelApp

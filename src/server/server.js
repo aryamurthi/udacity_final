@@ -50,7 +50,6 @@ function addUserEntry(req, res) {
 
 //return projectData
 app.get("/projectData", getProjectData);
-
 function getProjectData(req, res) {
   res.send(projectData.array);
 }

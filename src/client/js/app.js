@@ -1,15 +1,16 @@
 /* Global Variables */
-const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=";
-const apiKey = "&appid=5d440dcd25ae78fd3e21200458636bba&units=imperial";
-const countryCode = ",us";
 
 // Create a new date instance dynamically with JS
-let d = new Date();
-let newDate = (d.getMonth()+1) + "." + d.getDate() + "." + d.getFullYear();
 
-document.getElementById("generate").addEventListener("click", performAction);
+// document.getElementById("generate").addEventListener("click", performAction);
 
 function performAction(e) {
+  const baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=";
+  const apiKey = "&appid=5d440dcd25ae78fd3e21200458636bba&units=imperial";
+  const countryCode = ",us";
+  let d = new Date();
+  let newDate = d.getMonth() + 1 + "." + d.getDate() + "." + d.getFullYear();
+
   const zip = document.getElementById("zip").value;
   const feelings = document.getElementById("feelings").value;
 
@@ -26,9 +27,12 @@ const updateUI = async () => {
   const request = await fetch("/all");
   try {
     const allData = await request.json();
-    document.getElementById("date").innerHTML = allData[allData.length-1].date;
-    document.getElementById("temp").innerHTML = allData[allData.length-1].temp;
-    document.getElementById("content").innerHTML = allData[allData.length-1].feelings;
+    document.getElementById("date").innerHTML =
+      allData[allData.length - 1].date;
+    document.getElementById("temp").innerHTML =
+      allData[allData.length - 1].temp;
+    document.getElementById("content").innerHTML =
+      allData[allData.length - 1].feelings;
   } catch (error) {
     console.log("error", error);
   }
@@ -64,3 +68,5 @@ const postData = async (url = " ", data = {}) => {
     console.log("error", error);
   }
 };
+
+export { performAction };

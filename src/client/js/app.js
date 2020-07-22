@@ -15,16 +15,18 @@ function performAction(e) {
   const feelings = document.getElementById("feelings").value;
 
   getWeather(baseURL + zip + countryCode + apiKey).then(function (data) {
-    postData("/addUserEntry", {
+    postData("http://localhost:8080/addUserEntry", {
       feelings: feelings,
       temp: data.main.temp,
       date: newDate,
-    }).then(updateUI());
+    }).then(async () => {
+      updateUI();
+    });
   });
 }
 
 const updateUI = async () => {
-  const request = await fetch("/all");
+  const request = await fetch("http://localhost:8080/all");
   try {
     const allData = await request.json();
     document.getElementById("date").innerHTML =

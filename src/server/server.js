@@ -22,9 +22,13 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static("dist"));
 
+app.get("/", function (req, res) {
+  res.sendFile("dist/index.html");
+});
+
 // Setup Serverconst
 
-port = 8000;
+port = 8080;
 
 // //spin up server
 const server = app.listen(port, listening);

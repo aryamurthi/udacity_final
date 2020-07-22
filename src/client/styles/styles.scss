@@ -5,26 +5,77 @@ body{
 
 #app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(100px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
-    color: #f0d43a;
+    width: 100vw;
+    background: gainsboro;
+    color: black;
     justify-content: center;
-    grid-gap: 1em;
+    grid-gap: 0.5em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
+.headline{
+    font-size: 36px;
+    margin-top: 1vh;
+}
+
+.holder,.entry,.title,.zip,.feel{
+    padding: 3vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 2px 4px 5px #444;
+
+
+    .myInput,#feelings{
+        display: flex;
+        margin-bottom: 1vh;
+        height: auto;
+        width: 400px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 4px 5px #444;
+        
+    }
+
+    #zip {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 2px 4px 5px #444;
+    }
+    input{
+        height: 5vh;
+        width: auto;
+        background:#22b2da;
+        color: #f0d43a;
+        font-size: 20px;
+        font-family: 'Oswald', sans-serif;
+        border: none;
+        align-items: center;
+        text-align: center;
+        justify-content: center;;
+    }
 
 }
+
+
 
 .entry{
     background: rgba(59, 74, 107, .4);
+    height: auto;
 }
 
 #entryHolder{
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    padding: 1vh;
+
 
 }
 
@@ -37,13 +88,7 @@ body{
 }
 
 #content{
-
-}
-
-.headline {
-
-}
-.title{
+    text-align: center;
 
 }
 
@@ -53,20 +98,10 @@ label{
     font-size: 27px;
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-}
 
 button{
     width: 400px;
-    height: 100px;
+    height: auto;
     background: #3b4a6b;
     color: #f0d43a;
     font-size: 26px;

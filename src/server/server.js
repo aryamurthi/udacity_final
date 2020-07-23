@@ -40,9 +40,10 @@ function listening() {
 app.post("/addUserEntry", addUserEntry);
 
 function addUserEntry(req, res) {
-  (projectData.country = req.body.country);
+  projectData.country = req.body.country;
   (projectData.maxTemp = req.body.maxTemp),
     (projectData.minTemp = req.body.minTemp),
+    (projectData.imgsrc = req.body.imgsrc);
 
   res.send(projectData);
 }

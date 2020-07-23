@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Weather Journal</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles/styles.scss" />
-    <link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
-          rel='stylesheet'> 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-      </script> 
-      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" > 
-      </script> 
-  </head>
-  <body>
-    <div id="app">
-      <div class="holder headline">
-        Travel Planner
-      </div>
-      <div class="holder zip">
-        <label for="zip">My Trip To:</label>
-        <input type="text" id="placeName" placeholder="enter city here" />
-        <img id= "placeImage" src="" width="100px" height="100px" alt="image absent"/>
-      </div>
-      <div class="holder feel">
-        <label for="feelings">Departing:</label>
-        <input
-          type="text"
-          class="myInput"
-          id="my_date_picker"
-          placeholder="MM/DD/YYYY"
-        ></input>
-        <script> 
-          $(document).ready(function() { 
-              $(function() { 
-                  $( "#my_date_picker" ).datepicker(); 
-              }); 
-          }) 
-        </script> 
-        <button id="generate" type="submit">Save Trip</button>
-        <button id="remove" type="submit">Remove Trip</button>
-      </div>
 
-      <div class="holder entry">
-        <div class="title">Current Trip</div>
-        <div id="entryHolder">
-          <div id="content"></div>
-          <div id="maxTemp"></div>
-          <div id="minTemp"></div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Journal</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/styles.scss" />
+  <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+  </script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="holder headline">
+      Travel Planner
+    </div>
+    <div class="holder zip">
+      <label for="zip">My Trip To:</label>
+      <input type="text" id="placeName" placeholder="enter city here" />
+      <img id="placeImage" src="" width="100px" height="100px" alt="image absent" />
+    </div>
+    <div class="holder feel">
+      <label for="feelings">Departing:</label>
+      <input type="text" class="myInput" id="my_date_picker" placeholder="MM/DD/YYYY"></input>
+      <script>
+        $(document).ready(function () {
+          $(function () {
+            $("#my_date_picker").datepicker();
+          });
+        }) 
+      </script>
+      <button id="generate" type="submit">Save Trip</button>
+      <button id="remove" type="submit">Remove Trip</button>
+    </div>
+
+    <div class="holder entry">
+      <div class="title">Current Trip</div>
+      <div id="entryHolder">
+        <div id="content"></div>
+        <div id="maxTemp"></div>
+        <div id="minTemp"></div>
       </div>
     </div>
-    <script src="../js/app.js" type="text/javascript"></script>
-    <script>
-      // Check that service workers are supported
-      if ('serviceWorker' in navigator) {
-          // Use the window load event to keep the page load performant
-          window.addEventListener('load', () => {
-              navigator.serviceWorker.register('/service-worker.js');
-          });
-      }
-     </script>
-  </body>
+  </div>
+  <script src="../js/app.js" type="text/javascript"></script>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+</body>
+
 </html>

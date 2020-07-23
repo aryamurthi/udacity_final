@@ -1,7 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-const projectData = {
-   array: []
-};
+const projectData = {};
 
 // Require Express to run server and routes
 const express = require("express");
@@ -42,24 +40,21 @@ function listening() {
 app.post("/addUserEntry", addUserEntry);
 
 function addUserEntry(req, res) {
-  newEntry = {
-    longitude: req.body.longitude,
-    latitude: req.body.latitude,
-    country: req.body.country,
-  };
+  (projectData.country = req.body.country);
+  (projectData.maxTemp = req.body.maxTemp),
+    (projectData.minTemp = req.body.minTemp),
 
-  projectData.array.push(newEntry);
-  res.send(projectData.array);
+  res.send(projectData);
 }
 
 //return projectData
 app.get("/projectData", getProjectData);
 function getProjectData(req, res) {
-  res.send(projectData.array);
+  res.send(projectData);
 }
 
-app.get('/all',getAllData)
-function getAllData(req,res){
-    res.send(projectData.array)
-    console.log(projectData.array)
+app.get("/all", getAllData);
+function getAllData(req, res) {
+  res.send(projectData);
+  console.log(projectData);
 }

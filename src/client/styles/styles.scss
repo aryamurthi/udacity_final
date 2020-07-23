@@ -29,8 +29,8 @@ body{
     text-align: center;
     box-shadow: 2px 4px 5px #444;
 
+
     .myInput,#feelings{
-        display: flex;
         margin-bottom: 1vh;
         height: auto;
         width: 400px;
@@ -48,13 +48,13 @@ body{
         height: 5vh;
         width: auto;
         background:#a1dd7e;
-        color: #f0d43a;
-        font-size: 20px;
+        color: #000000;
+        font-size: 26px;
         font-family: 'Oswald', sans-serif;
         border: none;
         align-items: center;
         text-align: center;
-        justify-content: center;;
+        justify-content: center;
     }
 
 }
@@ -69,12 +69,17 @@ body{
 #entryHolder{
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 20px;
     padding: 1vh;
 
 
 }
+input:hover{
+    background: #f0d43a;
+    color:#3b4a6b;
+    text-shadow: blue;
 
+}
 #date{
 
 }

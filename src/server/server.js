@@ -43,9 +43,9 @@ app.post("/addUserEntry", addUserEntry);
 
 function addUserEntry(req, res) {
   newEntry = {
-    temp: req.body.temp,
-    date: req.body.date,
-    feelings: req.body.feelings,
+    longitude: req.body.longitude,
+    latitude: req.body.latitude,
+    country: req.body.country,
   };
 
   projectData.array.push(newEntry);

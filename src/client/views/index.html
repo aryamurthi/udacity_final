@@ -8,6 +8,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/styles.scss" />
+    <link href= 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" > 
+      </script> 
   </head>
   <body>
     <div id="app">
@@ -15,27 +21,33 @@
         Travel Planner
       </div>
       <div class="holder zip">
-        <label for="zip">Enter Zipcode here</label>
-        <input type="text" id="zip" placeholder="enter zip code here" />
+        <label for="zip">My Trip To:</label>
+        <input type="text" id="zip" placeholder="enter city here" />
       </div>
       <div class="holder feel">
-        <label for="feelings">How are you feeling today?</label>
-        <textarea
+        <label for="feelings">Departing:</label>
+        <input
+          type="text"
           class="myInput"
-          id="feelings"
-          placeholder="Enter your feelings here"
-          rows="4"
-          cols="50"
-        ></textarea>
-        <button id="generate" type="submit">Generate</button>
+          id="my_date_picker"
+          placeholder="MM/DD/YYYY"
+        ></input>
+        <script> 
+          $(document).ready(function() { 
+              $(function() { 
+                  $( "#my_date_picker" ).datepicker(); 
+              }); 
+          }) 
+        </script> 
+        <button id="generate" type="submit">Save Trip</button>
       </div>
 
       <div class="holder entry">
         <div class="title">Most Recent Entry</div>
         <div id="entryHolder">
+          <div id="content"></div>
           <div id="date"></div>
           <div id="temp"></div>
-          <div id="content"></div>
         </div>
       </div>
     </div>

@@ -29,18 +29,14 @@ body{
     text-align: center;
     box-shadow: 2px 4px 5px #444;
 
-
     .myInput,#feelings{
         display: flex;
         margin-bottom: 1vh;
         height: auto;
         width: 400px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
         box-shadow: 2px 4px 5px #444;
-        
     }
+    
 
     #zip {
         align-items: center;
@@ -138,19 +134,22 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+    color: #f03a3a; 
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
+    color: #f03a3a; 
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
+    color: #f03a3a; 
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 
 } 

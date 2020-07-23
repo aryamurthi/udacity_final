@@ -1,11 +1,4 @@
-/* Global Variables */
-
-// Create a new date instance dynamically with JS
-
-// document.getElementById("generate").addEventListener("click", performAction);
-
 function performAction(e) {
-
   let projectData = {
     maxTemp: "",
     minTemp: "",
@@ -14,7 +7,6 @@ function performAction(e) {
   };
   //user Input uri encoded
   const placeName = document.getElementById("placeName").value;
-  
 
   //geonames API credentials
   const username = "&maxRows=1&username=aryamurthi";

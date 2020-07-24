@@ -30,9 +30,9 @@ npm run dev
 
 ## Important Files
 
--webpack.config.js file contains info for running webpack dev server and states requirements
--package.json file contains scripts for running testing 
--src/js/app.js file contain all three API Keys used in the project and includes the function that queries them
+    -webpack.config.js file contains info for running webpack dev server and states requirements
+    -package.json file contains scripts for running testing 
+    -src/js/app.js file contain all three API Keys used in the project and includes the function that queries them
 
 
 ### Dependencies

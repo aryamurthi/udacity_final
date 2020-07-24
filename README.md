@@ -66,3 +66,6 @@ npm run dev
 ### References
 
 Project is based off of a previous weatherjournal app found [here](https://github.com/aryamurthi/udacityWeatherJournalApp)
+
+Cross browser rendering of datepicker is from [Jquery UI](https://jqueryui.com/datepicker/) 
+
